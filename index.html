@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SneakerVerse - Início</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">SNEAKER<span>VERSE</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html" style="color: var(--primary-purple);">Início</a></li>
+                <li><a href="nike.html">Nike</a></li>
+                <li><a href="adidas.html">Adidas</a></li>
+                <li><a href="newbalance.html">New Balance</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Seu estilo, <span class="highlight">seu passo.</span></h1>
+        <p>Bem-vindo à maior coleção de sneakers do Brasil.</p>
+    </section>
+
+    <main class="container">
+        <h2>Destaques da Semana</h2>
+        
+        <div class="grid">
+            
+            <div class="card">
+                <img src="img/jordan1.jpg" alt="Nike Jordan" onerror="this.src='https://via.placeholder.com/400x400/111/8e2de2?text=Jordan+1'">
+                <div class="card-info">
+                    <h3 class="card-title">Nike Air Jordan Retro</h3>
+                    <p class="card-price">R$ 899,90</p>
+                    <button class="details-btn" 
+                        data-img="img/jordan1.jpg"
+                        data-images="img/jordan1.jpg,img/jordan-lado.jpg,img/jordan-costas.jpg"
+                        data-name="Nike Air Jordan Retro"
+                        data-price="R$ 899,90"
+                        data-desc="O clássico que nunca sai de moda. Design robusto e conforto premium."
+                        data-sizes="38,39,40,41,42,43">
+                        Ver Detalhes
+                    </button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="img/yeezy.jpg" alt="Adidas Yeezy" onerror="this.src='https://via.placeholder.com/400x400/111/8e2de2?text=Yeezy'">
+                <div class="card-info">
+                    <h3 class="card-title">Adidas Yeezy Boost 350</h3>
+                    <p class="card-price">R$ 1.299,00</p>
+                    <button class="details-btn" 
+                        data-img="img/yeezy.jpg"
+                        data-images="img/yeezy.jpg,img/yeezy-lado.jpg,img/yeezy-frente.jpg"
+                        data-name="Adidas Yeezy Boost 350"
+                        data-price="R$ 1.299,00"
+                        data-desc="Inovação e estilo futurista com tecnologia Boost."
+                        data-sizes="39,40,41,42">
+                        Ver Detalhes
+                    </button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="img/nb550.jpg" alt="NB 550" onerror="this.src='https://via.placeholder.com/400x400/111/8e2de2?text=NB+550'">
+                <div class="card-info">
+                    <h3 class="card-title">New Balance 550 Vintage</h3>
+                    <p class="card-price">R$ 899,90</p>
+                    <button class="details-btn" 
+                        data-img="img/nb550.jpg"
+                        data-images="img/nb550.jpg,img/nb550-lado.jpg"
+                        data-name="New Balance 550 Vintage"
+                        data-price="R$ 899,90"
+                        data-desc="A estética retrô do basquete dos anos 80 está de volta."
+                        data-sizes="39,40,41,42,43">
+                        Ver Detalhes
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <div class="modal-img-col">
+                    <div class="main-img-box"><img id="m-img" src="" alt="Produto"></div>
+                    <div id="m-gallery" class="gallery-container"></div>
+                </div>
+                <div class="modal-info">
+                    <h2 id="m-name"></h2>
+                    <p id="m-desc"></p>
+                    <div class="sizes-section">
+                        <span>Tamanhos Disponíveis:</span>
+                        <div id="m-sizes" class="size-options"></div>
+                    </div>
+                    <div class="price-box">
+                        <span id="m-price"></span>
+                        <button class="buy-btn">COMPRAR NO WHATSAPP</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://wa.me/558591597451?text=Olá!%20Gostaria%20de%20ver%20o%20catálogo." class="whatsapp-float" target="_blank">
+       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <footer><p>&copy; 2026 SneakerVerse</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>
